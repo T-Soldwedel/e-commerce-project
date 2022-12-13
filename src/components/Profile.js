@@ -58,16 +58,16 @@ export default function Profile() {
             <p>{user.fullName}</p>
             <p>{user.email}</p>
             <div>
-              <img src={user.profileImage} width="200" alt="profileImage" />
+              <img src={user.profileImage} width="150" alt="profileImage" />
             </div>
 
-            <button onClick={editProfile}>Update Profile</button>
-            <button onClick={logout}>Logout</button>
-            <button onClick={deleteUserAccount}>Delete User </button>
+            <button className="profile-button" onClick={editProfile}>Update Profile</button>
+            <button className="profile-button" onClick={logout}>Logout</button>
+            <button className="profile-button" onClick={deleteUserAccount}>Delete User </button>
           </div>
 
           <div className="previous-orders">
-            <h4>Orders: </h4>
+            <h5>Orders </h5>
 
             <ul>
               {user.orders.map((order) => {

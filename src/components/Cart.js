@@ -89,7 +89,7 @@ export default function Cart() {
         Total:{" "}
         {cart.reduce((acc, item) => (acc += item.price * item.quantity), 0)}
       </h5>
-      <button className="cart-place-order" onClick={placeOrder}>Place Order</button>
+      <button className="cart-button" onClick={placeOrder}>Place Order</button>
     </div>
   );
 }

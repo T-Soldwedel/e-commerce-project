@@ -1,35 +1,50 @@
 .admin-panel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.admin-panel-container h5{
-    margin: 1rem;
+.admin-panel-container h5 {
+  margin: 1rem;
 }
 
 .add-products {
-    text-align: center;
-    background-color: #eed0d0;
-    padding: 1rem;
+  text-align: center;
+  background-color: #eed0d0;
+  padding: 1rem;
 }
 
 .add-products form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.add-products form input{
-    width: 15rem;
-    outline: 2px solid red;
-}
-
-.add-products button{
-    padding: .3rem;
-    border-radius: 5px;
+.add-products form input {
+  width: 15rem;
 }
 
-.add-products button:hover{
-    background-color: rgb(245, 243, 84);
+.admin-button {
+  margin-right: 5px;
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+}
+
+.admin-button:hover,
+.admin-button:focus {
+  background-color: #f082ac;
 }

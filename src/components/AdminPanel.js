@@ -38,7 +38,7 @@ export default function AdminPanel() {
           </label>
           <br />
           <br />
-          <button>Add New Product</button>
+          <button className="admin-button">Add New Product</button>
         </form>
       </div>
 
