@@ -1,0 +1,35 @@
+.admin-panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.admin-panel-container h5{
+    margin: 1rem;
+}
+
+.add-products {
+    text-align: center;
+    background-color: #eed0d0;
+    padding: 1rem;
+}
+
+.add-products form {
+    display: flex;
+    flex-direction: column;
+}
+.add-products form input{
+    width: 15rem;
+    outline: 2px solid red;
+}
+
+.add-products button{
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+.add-products button:hover{
+    background-color: rgb(245, 243, 84);
+}
