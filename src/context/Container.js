@@ -19,18 +19,18 @@ const iconPinterest = <FontAwesomeIcon icon={faPinterest} />
 
 
 export default function Container(props) {
-  const [records, setRecords] = useState([]);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/records")
+    fetch("/products")
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        setRecords(result);
+        setProducts(result);
       });
 
     const token = localStorage.getItem("token");
@@ -52,7 +52,7 @@ export default function Container(props) {
 
   return (
     <MyContext.Provider
-      value={{ records, setRecords, cart, setCart, user, setUser, iconMinus, iconPlus, iconFacebook, iconTwitter, iconInstagram, iconPinterest }}
+      value={{ products, setProducts, cart, setCart, user, setUser, iconMinus, iconPlus, iconFacebook, iconTwitter, iconInstagram, iconPinterest }}
     >
       {props.children}
     </MyContext.Provider>

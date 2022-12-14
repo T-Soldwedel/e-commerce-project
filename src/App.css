@@ -20,7 +20,7 @@ body {
 body::after {
   content: '';
   display: block;
-  height: 11rem; /* Set same as footer's height */
+  height: 5rem; /* Set same as footer's height */
 }
 
 body::-webkit-scrollbar {
@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: rgb(236, 232, 232);
   /* background-color: rgb(245, 206, 77) */
+  z-index: 99;
 }
 
 .navlinks {

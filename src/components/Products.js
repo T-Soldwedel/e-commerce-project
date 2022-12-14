@@ -27,10 +27,11 @@ export default function Products() {
           return (
             <div key={product._id} className="flex-container">
               <div className="single-product">
+
                 <img src={product.img} alt="" />
                 <p>{product.title}</p>
-                <p>{product.author}</p>
                 <p>$ {product.price}</p>
+                
                 <div className="stars">
                   <span>{iconStarBlack}</span>
                   <span>{iconStarBlack}</span>
@@ -40,11 +41,11 @@ export default function Products() {
                 </div>
               </div>
               <div>
-                <button className="cartButton" onClick={() => addItemIntoCart(product)}>
+                <button className="admin-button" onClick={() => addItemIntoCart(product)}>
                   Add To Cart {""}
                   <span>{iconCart}</span>
                 </button>
-                {user && user.role === "admin" && <button>delete</button>}
+                {user && user.role === "admin" && <button className="admin-button">delete</button>}
               </div>
             </div>
           );

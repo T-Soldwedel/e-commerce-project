@@ -16,11 +16,32 @@
 
 .login-container form input{
     width: 100%;
+    padding-left: .5rem;
   }
 
-.login-container button{
-width: 50%;
-margin-top: 1rem; 
-border-radius: 10px;
-}
+  .admin-button {
+    margin-right: 5px;
+    background-color: #ea4c89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+  }
+  
+  .admin-button:hover,
+  .admin-button:focus {
+    background-color: #f082ac;
+  }
 

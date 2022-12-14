@@ -15,9 +15,11 @@
   font-size: clamp(0.5rem, 1vw, 20px);
 }
 
-.signup-container form input {
+.input-padding {
   width: 100%;
+  padding-left: .5rem;
 }
+
 
 .signup-container button {
   width: 50%;

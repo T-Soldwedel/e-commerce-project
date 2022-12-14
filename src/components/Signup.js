@@ -33,22 +33,22 @@ export default function Signup() {
       <h5>Signup</h5>
       <form onSubmit={registerUser}>
         <label>
-          <input type="text" name="firstName" placeholder="First Name"  required />{" "}
+          <input className="input-padding" type="text" name="firstName" placeholder="First Name"  required />{" "}
         </label>
         <br />
 
         <label>
-          <input type="text" name="lastName" placeholder="Last Name" required />{" "}
+          <input className="input-padding" type="text" name="lastName" placeholder="Last Name" required />{" "}
         </label>
         <br />
 
         <label>
-          <input type="email" name="email" placeholder="Email"required />{" "}
+          <input className="input-padding" type="email" name="email" placeholder="Email"required />{" "}
         </label>
         <br />
 
         <label>
-          <input type="password" name="password" placeholder="Password" required />{" "}
+          <input className="input-padding" type="password" name="password" placeholder="Password" required />{" "}
         </label>
         <br />
 
@@ -57,7 +57,7 @@ export default function Signup() {
         </label>
         <br />
 
-        <button>Signup User</button>
+        <button className="admin-button">Signup User</button>
       </form>
       <Toaster position="top-center" />{" "}
     </div>

@@ -11,15 +11,15 @@ const iconStarBlack = <FontAwesomeIcon icon={faStar} />;
 
 export default function Home() {
 
-    const { records, setCart, cart, user } = useContext(MyContext);
+    const { products, setCart, cart, user } = useContext(MyContext);
 
-    const addItemIntoCart = (record) => {
-        const foundItem = cart.find((item) => item._id === record._id);
+    const addItemIntoCart = (product) => {
+        const foundItem = cart.find((item) => item._id === product._id);
         if (foundItem) {
           foundItem.quantity++;
           setCart([...cart]);
         } else {
-          setCart([...cart, { ...record, quantity: 1 }]);
+          setCart([...cart, { ...product, quantity: 1 }]);
         }
       };
 
@@ -30,15 +30,15 @@ export default function Home() {
       <div className="home-container">
       
       <div className="home-products">
-        {records.map((record) => {
+        {products.map((product) => {
           return (
-            <div key={record._id} className="flex-container">
+            <div key={product._id} className="flex-container">
               <div className="single-product">
-                <img src={record.img} alt="" />
-                <p>{record.title}</p>
+                <img src={product.img} alt="" />
+                <p>{product.title}</p>
                 
-                <p>{record.author}</p>
-                <p>$ {record.price}</p>
+                <p>{product.author}</p>
+                <p>$ {product.price}</p>
                 <div className="stars">
                   <span>{iconStarBlack}</span>
                   <span>{iconStarBlack}</span>
@@ -48,7 +48,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <button className="cartButton" onClick={() => addItemIntoCart(record)}>
+                <button className="admin-button" onClick={() => addItemIntoCart(product)}>
                   Add To Cart {""}
                   <span>{iconCart}</span>
                 </button>

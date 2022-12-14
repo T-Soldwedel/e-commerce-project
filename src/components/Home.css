@@ -1,13 +1,11 @@
-.home-container {
-  background-image: linear-gradient(
-    to right bottom,
-    #f5ce4d,
-    #ffbb65,
-    #ffae7e,
-    #f1a594,
-    #d9a2a2
-  );
-  margin-bottom: 3rem;
+.home-products {
+  margin-top: 0.21rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #eed0d0;
+  padding: 2rem;
 }
 
 .animated-text {
@@ -27,15 +25,7 @@
   }
 }
 
-.home-products {
-  margin-top: 0.21rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  gap: 1rem;
-  background-color: #eed0d0;
-  padding: 2rem;
-}
+
 
 .single-product {
   width: 18rem;

@@ -51,7 +51,7 @@ export default function Login() {
           <input type="password" name="password" />
         </label>
         <br />
-        <button>Login</button>
+        <button className="admin-button">Login</button>
       </form>
     </div>
   );

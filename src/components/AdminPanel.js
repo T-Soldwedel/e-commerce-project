@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { MyContext } from "../context/MyContext";
+import toast, { Toaster } from "react-hot-toast";
 import "./AdminPanel.css";
 
 export default function AdminPanel() {
@@ -13,8 +14,13 @@ export default function AdminPanel() {
       headers: { token: localStorage.getItem("token") },
       body: data,
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((result) => {
+        if (result.success) {
+        toast.success("Successfully added product!");
+      } else {
+        toast.error(result.message);
+      }
         setProducts([result.data, ...products]);
       });
   };
@@ -22,6 +28,7 @@ export default function AdminPanel() {
   return (
     <div className="admin-panel-container">
       <h4>Admin Panel</h4>
+      <Toaster position="top-center" />
       <div className="add-products">
         <h5>Add New Product</h5>
         <form onSubmit={addingNewProduct}>

@@ -16,12 +16,12 @@ export default function Orders() {
               <div className="single-order-container" key={order._id}>
                  <p>{order._id}</p>
                 <div className="single-order">
-                  {order.records.map((record) => {
+                  {order.products.map((product) => {
                     return (
-                      <div  key={record._id}>
-                        <img src={record.img} alt="" />
-                        <p>{record.title}</p>
-                        <p>{record.price}€</p>
+                      <div  key={product._id}>
+                        <img src={product.img} alt="" />
+                        <p>{product.title}</p>
+                        <p>{product.price}€</p>
                       </div>
                     );
                   })}

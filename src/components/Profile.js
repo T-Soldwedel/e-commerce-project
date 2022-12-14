@@ -75,11 +75,11 @@ export default function Profile() {
                   <div key={order._id}>
                     <h5>{order._id}</h5>
 
-                    <div className="deleteButton">
+                    <div >
                       <p>$ {order.totalPrice}</p>
-                      <button onClick={() => deleteOrder(order._id)}>
+                      <span className="profile-button" onClick={() => deleteOrder(order._id)}>
                         {iconTrash}
-                      </button>
+                      </span>
                     </div>
                   </div>
                 );
